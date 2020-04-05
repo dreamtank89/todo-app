@@ -15,7 +15,7 @@
             </div>
             <button 
             @click.prevent="updatePost"
-            class="button is-primary is-small is-outlined pt">Update</button>
+            class="button is-primary is-outlined pt">Update</button>
         </form>
     </div>
     
