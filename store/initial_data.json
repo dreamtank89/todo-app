@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "title": "ini post title 1",
+      "subtitle": "subtitle 1",
+      "content": "content 1",
+      "_id": "oa5dec3",
+      "createdAt": 1586068459661
+    },
+    {
+      "title": "title 2",
+      "subtitle": "subtitle 2",
+      "content": "content 2",
+      "_id": "pr2slxr",
+      "createdAt": 1586068496510
+    }
+  ]
+}
