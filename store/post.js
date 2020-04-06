@@ -12,7 +12,8 @@ export function fetchPostsAPI() {
 
 export const state = () => {
     return {
-        items:[]    
+        items:[],
+        archivedPosts: []
     }
 }
 //getters are like computed properties for VUex
@@ -23,6 +24,16 @@ export const getters = {
 }
 
 export const actions = {
+    getArchivedPosts({commit}) {
+        const archivedPosts = localStorage.getItem('archived_post')
+        if (archivedPosts) {
+            commit('setArchivedPosts', JSON.parse(archivedPosts))
+            return archivedPosts
+        } else {
+            localStorage.setItem('archived_posts', JSON.stringify([]))
+            return []
+        }
+    },
     fetchPosts({commit}) {
         return this.$axios.$get('/api/posts')
             .then((posts) => {
@@ -70,6 +81,9 @@ export const actions = {
 }
 
 export const mutations = {
+    searArchivedPosts(state, archivedPosts) {
+        state.archivedItems = archivedPosts
+    },
     setPosts(state, posts) {
         state.items = posts
     },

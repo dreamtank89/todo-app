@@ -52,6 +52,9 @@ export default {
       return store.dispatch('post/fetchPosts')
     }
   },
+  mounted() {
+    this.$store.dispatch('post/getArchivedPosts')
+  },
   // async asyncData() {
   //   const posts = await fetchPostsAPI()
   //   return { posts }
@@ -67,6 +70,9 @@ export default {
   computed: {
     posts() {
       return this.$store.state.post.items
+    },
+    archivedPOsts() {
+      return this.$store.state.post.archivedItems
     }
   }
 }
