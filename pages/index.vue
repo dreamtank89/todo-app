@@ -22,6 +22,7 @@
                     :subtitle="post.subtitle"
                     :date="post.createdAt"
                     :isRead="post.isRead"
+                    :id="post._id"
                     />
                 
               </div>
